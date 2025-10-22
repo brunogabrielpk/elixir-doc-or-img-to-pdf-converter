@@ -1,0 +1,61 @@
+# Build artifacts
+/_build/
+/deps/
+/*.ez
+
+# Generated assets
+/priv/static/assets/
+/priv/static/cache_manifest.json
+
+# Node modules
+/assets/node_modules/
+
+# Database files
+*.db
+*.db-*
+
+# Environment files
+.env
+.env.local
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+/doc/
+
+# Test files
+/test/
+/cover/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.log
+
+# Uploaded and converted files (will be created in container)
+/priv/static/uploads/
+/priv/static/converted/
+
+# Docker files
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# README and docs
+README.md
+*.md

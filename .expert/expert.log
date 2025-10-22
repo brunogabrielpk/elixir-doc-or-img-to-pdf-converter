@@ -1890,3 +1890,213 @@ Type: :worker
     (elixir 1.17.3) lib/task/supervised.ex:101: Task.Supervised.invoke_mfa/2
 
 14:00:59.333 [debug] sent notification server -> client window/logMessage
+14:33:44.592 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (elixir 1.17.3) lib/enum.ex:987: Enum."-each/2-lists^foreach/1-0-"/2
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:196: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+
+14:33:44.592 [debug] sent notification server -> client window/logMessage
+14:33:44.592 [warning] client -> server notification crashed
+14:47:02.185 [debug] handled notification client -> server workspace/didChangeConfiguration in 174µs
+14:47:02.185 [debug] handled notification client -> server workspace/didChangeConfiguration in 185µs
+14:59:18.309 [info] ################### opened file:///home/pokkew/projects/elixir/pdf_converter/lib/pdf_converter/release.ex
+14:59:18.309 [debug] handled notification client -> server textDocument/didOpen in 440µs
+15:00:40.616 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:122: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:00:40.616 [debug] sent notification server -> client window/logMessage
+15:00:40.616 [warning] client -> server notification crashed
+15:00:41.004 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:171: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:00:41.004 [debug] sent notification server -> client window/logMessage
+15:00:41.004 [warning] client -> server notification crashed
+15:00:41.004 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (elixir 1.17.3) lib/enum.ex:987: Enum."-each/2-lists^foreach/1-0-"/2
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:196: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+
+15:00:41.005 [debug] sent notification server -> client window/logMessage
+15:00:41.005 [warning] client -> server notification crashed
+15:06:39.476 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/.env error was {:error, :not_open}
+15:06:39.477 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:06:39.477 [debug] handled notification client -> server textDocument/didSave in 378µs
+15:09:26.800 [debug] handled notification client -> server workspace/didChangeConfiguration in 190µs
+15:09:26.800 [debug] handled notification client -> server workspace/didChangeConfiguration in 83µs
+15:10:23.187 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/assets/js/app.js error was {:error, :not_open}
+15:10:23.187 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:10:23.187 [debug] handled notification client -> server textDocument/didSave in 385µs
+15:13:39.128 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:122: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:13:39.128 [debug] sent notification server -> client window/logMessage
+15:13:39.128 [warning] client -> server notification crashed
+15:13:39.517 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:122: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:13:39.517 [debug] sent notification server -> client window/logMessage
+15:13:39.518 [warning] client -> server notification crashed
+15:13:39.519 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (elixir 1.17.3) lib/enum.ex:987: Enum."-each/2-lists^foreach/1-0-"/2
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:196: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+
+15:13:39.519 [debug] sent notification server -> client window/logMessage
+15:13:39.519 [warning] client -> server notification crashed
+15:13:39.519 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:171: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:13:39.519 [debug] sent notification server -> client window/logMessage
+15:13:39.519 [warning] client -> server notification crashed
+15:18:08.723 [info] ################### opened file:///home/pokkew/projects/elixir/pdf_converter/lib/pdf_converter_web/endpoint.ex
+15:18:08.723 [debug] handled notification client -> server textDocument/didOpen in 478µs
+15:18:13.294 [info] ################### opened file:///home/pokkew/projects/elixir/pdf_converter/lib/pdf_converter_web.ex
+15:18:13.294 [debug] handled notification client -> server textDocument/didOpen in 854µs
+15:18:18.047 [debug] handled notification client -> server workspace/didChangeConfiguration in 193µs
+15:18:18.053 [debug] handled notification client -> server workspace/didChangeConfiguration in 133µs
+15:18:30.785 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/Dockerfile error was {:error, :not_open}
+15:18:30.786 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:18:30.786 [debug] handled notification client -> server textDocument/didSave in 517µs
+15:19:31.524 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:122: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:19:31.524 [debug] sent notification server -> client window/logMessage
+15:19:31.524 [warning] client -> server notification crashed
+15:19:31.894 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (elixir 1.17.3) lib/enum.ex:987: Enum."-each/2-lists^foreach/1-0-"/2
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:196: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+
+15:19:31.894 [debug] sent notification server -> client window/logMessage
+15:19:31.894 [warning] client -> server notification crashed
+15:19:31.894 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:171: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:19:31.894 [debug] sent notification server -> client window/logMessage
+15:19:31.894 [warning] client -> server notification crashed
+15:19:43.930 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:122: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:19:43.930 [debug] sent notification server -> client window/logMessage
+15:19:43.930 [warning] client -> server notification crashed
+15:19:44.226 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:171: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:592: anonymous fn/4 in XPGenLSP.attempt/4
+
+15:19:44.226 [debug] sent notification server -> client window/logMessage
+15:19:44.226 [warning] client -> server notification crashed
+15:19:44.226 [error] ** (ErlangError) Erlang error: {:erpc, :noconnection}
+    (kernel 10.2.7.1) erpc.erl:1376: :erpc.call/5
+    (elixir 1.17.3) lib/enum.ex:987: Enum."-each/2-lists^foreach/1-0-"/2
+    (xp_expert 0.1.0-4dfba22) lib/expert/state.ex:196: XPExpert.State.apply/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:200: XPExpert.apply_to_state/2
+    (xp_expert 0.1.0-4dfba22) lib/expert.ex:139: XPExpert.handle_notification/2
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:519: anonymous fn/2 in XPGenLSP.loop/3
+    (xp_telemetry 1.3.0) /home/runner/work/expert/expert/apps/expert/deps/telemetry/src/telemetry.erl:324: :xp_telemetry.span/3
+    (xp_gen_lsp 0.11.1) lib/gen_lsp.ex:515: anonymous fn/4 in XPGenLSP.loop/3
+
+15:19:44.226 [debug] sent notification server -> client window/logMessage
+15:19:44.226 [warning] client -> server notification crashed
+15:19:49.592 [info] ################### opened file:///home/pokkew/projects/elixir/pdf_converter/config/prod.exs
+15:19:49.592 [debug] handled notification client -> server textDocument/didOpen in 386µs
+15:20:25.332 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/Dockerfile error was {:error, :not_open}
+15:20:25.332 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:20:25.332 [debug] handled notification client -> server textDocument/didSave in 342µs
+15:25:33.519 [info] ################### opened file:///home/pokkew/projects/elixir/pdf_converter/config/config.exs
+15:25:33.519 [debug] handled notification client -> server textDocument/didOpen in 654µs
+15:25:55.724 [debug] handled notification client -> server workspace/didChangeConfiguration in 187µs
+15:25:55.725 [debug] handled notification client -> server workspace/didChangeConfiguration in 123µs
+15:26:10.525 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/assets/css/app.css error was {:error, :not_open}
+15:26:10.525 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:26:10.526 [debug] handled notification client -> server textDocument/didSave in 471µs
+15:30:08.940 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/assets/css/app.css error was {:error, :not_open}
+15:30:08.940 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:30:08.940 [debug] handled notification client -> server textDocument/didSave in 404µs
+15:31:22.829 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/assets/css/app.css error was {:error, :not_open}
+15:31:22.829 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:31:22.829 [debug] handled notification client -> server textDocument/didSave in 358µs
+15:33:42.363 [error] Save failed for uri file:///home/pokkew/projects/elixir/pdf_converter/Dockerfile error was {:error, :not_open}
+15:33:42.363 [error] Failed to handle textDocument/didSave, {{:error, :not_open}, %XPExpert.State{configuration: %XPExpert.Configuration{project: %XPForge.Project{root_uri: "file:///home/pokkew/projects/elixir/pdf_converter", mix_exs_uri: "file:///home/pokkew/projects/elixir/pdf_converter/mix.exs", mix_project?: true, mix_env: nil, mix_target: nil, env_variables: %{}, project_module: nil, entropy: 41883}, support: %XPExpert.Configuration.Support{code_action_dynamic_registration: true, hierarchical_symbols: true, snippet: true, deprecated: false, tags: false, signature_help: %XPGenLSP.Structures.SignatureHelpClientCapabilities{context_support: nil, signature_information: %{documentation_format: ["markdown", "plaintext"], parameter_information: %{label_offset_support: true}, active_parameter_support: true}, dynamic_registration: true}, work_done_progress: true}, client_name: "Zed", additional_watched_extensions: nil, dialyzer_enabled?: false}, initialized?: true, engine_initialized?: true, shutdown_received?: false, in_flight_requests: %{}}}
+15:33:42.363 [debug] handled notification client -> server textDocument/didSave in 386µs

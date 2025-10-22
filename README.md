@@ -98,6 +98,135 @@ cp .env.example .env
 
 The application will use default values if environment variables are not set.
 
+## Docker Deployment (Production)
+
+### Quick Start with Docker
+
+The easiest way to deploy the entire application is using Docker Compose, which will build and run both the application and PostgreSQL database.
+
+#### 1. Generate Secret Key
+
+```bash
+# Generate a secret key (you can use Elixir if installed, or any random string generator)
+mix phx.gen.secret
+# Or use openssl
+openssl rand -base64 48
+```
+
+#### 2. Set Environment Variables
+
+Create a `.env` file or export variables:
+
+```bash
+export SECRET_KEY_BASE="your-generated-secret-key-here"
+export PHX_HOST="yourdomain.com"  # or localhost for testing
+```
+
+#### 3. Build and Start All Services
+
+```bash
+# Build and start both app and database
+docker-compose up -d --build
+
+# View logs
+docker-compose logs -f
+
+# Check status
+docker-compose ps
+```
+
+The application will be available at `http://localhost:4000`
+
+#### 4. Stop Services
+
+```bash
+# Stop containers
+docker-compose down
+
+# Stop and remove all data (⚠️ destructive)
+docker-compose down -v
+```
+
+### Docker Commands Reference
+
+```bash
+# Build the application image
+docker-compose build app
+
+# Start services in foreground (see logs)
+docker-compose up
+
+# Start services in background
+docker-compose up -d
+
+# Restart a specific service
+docker-compose restart app
+
+# View application logs
+docker-compose logs -f app
+
+# View database logs
+docker-compose logs -f postgres
+
+# Execute commands in the app container
+docker-compose exec app /app/bin/pdf_converter remote
+
+# Access PostgreSQL shell
+docker-compose exec postgres psql -U pdf_converter -d pdf_converter_prod
+
+# Scale the application (if needed)
+docker-compose up -d --scale app=3
+```
+
+### Manual Docker Build
+
+If you prefer to build and run the Docker image manually:
+
+```bash
+# Build the image
+docker build -t pdf_converter:latest .
+
+# Run the container
+docker run -d \
+  --name pdf_converter \
+  -p 4000:4000 \
+  -e DATABASE_URL="ecto://user:pass@host:5432/database" \
+  -e SECRET_KEY_BASE="your-secret-key" \
+  -e PHX_HOST="localhost" \
+  pdf_converter:latest
+```
+
+### Production Deployment Checklist
+
+- [ ] Generate and set `SECRET_KEY_BASE` environment variable
+- [ ] Configure `PHX_HOST` with your domain name
+- [ ] Update database password in `docker-compose.yml`
+- [ ] Set up SSL/TLS termination (nginx/Traefik/Caddy)
+- [ ] Configure proper firewall rules
+- [ ] Set up log aggregation and monitoring
+- [ ] Configure backup strategy for PostgreSQL data
+- [ ] Set resource limits in docker-compose.yml if needed
+- [ ] Use Docker secrets or vault for sensitive data
+
+### Volume Management
+
+The application uses Docker volumes for persistence:
+
+- `postgres_data`: PostgreSQL database files
+- `uploads_data`: Uploaded files awaiting conversion
+- `converted_data`: Generated PDF files
+
+To backup volumes:
+
+```bash
+# Backup PostgreSQL data
+docker-compose exec postgres pg_dump -U pdf_converter pdf_converter_prod > backup.sql
+
+# Restore from backup
+docker-compose exec -T postgres psql -U pdf_converter pdf_converter_prod < backup.sql
+```
+
+
 ## Usage
 
 ### Starting the Server

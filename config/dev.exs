@@ -2,8 +2,12 @@ import Config
 
 # Configure your database
 config :pdf_converter, PdfConverter.Repo,
-  database: Path.expand("../pdf_converter_dev.db", __DIR__),
-  pool_size: 5,
+  username: System.get_env("DATABASE_USER", "pdf_converter"),
+  password: System.get_env("DATABASE_PASSWORD", "pdf_converter_dev_password"),
+  hostname: System.get_env("DATABASE_HOST", "localhost"),
+  database: System.get_env("DATABASE_NAME", "pdf_converter_dev"),
+  port: String.to_integer(System.get_env("DATABASE_PORT", "5432")),
+  pool_size: 10,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true
 

@@ -39,6 +39,10 @@ npm-debug.log
 *.db
 *.db-*
 
+# Environment variables
+.env
+.env.local
+
 # Uploaded and converted files
 /priv/static/uploads/
 /priv/static/converted/

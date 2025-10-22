@@ -19,13 +19,13 @@ A modern, real-time web application built with Phoenix LiveView for converting v
   - File size
   - Conversion duration
   - Timestamp
-- **Database Persistence**: SQLite-backed storage for conversion records
+- **Database Persistence**: PostgreSQL-backed storage for conversion records
 
 ## Technology Stack
 
 - **Framework**: Phoenix 1.8.1 with LiveView 1.1.0
 - **Language**: Elixir ~> 1.15
-- **Database**: SQLite3 with Ecto
+- **Database**: PostgreSQL 16 with Ecto (Docker containerized)
 - **UI**: TailwindCSS with Heroicons
 - **Conversion Engine**: LibreOffice (headless mode)
 - **Web Server**: Bandit 1.5
@@ -36,6 +36,8 @@ Before running this application, ensure you have the following installed:
 
 - **Elixir** 1.15 or later ([Installation Guide](https://elixir-lang.org/install.html))
 - **Erlang/OTP** (typically installed with Elixir)
+- **Docker** and **Docker Compose** (for PostgreSQL database)
+  - [Docker Installation Guide](https://docs.docker.com/get-docker/)
 - **LibreOffice** (required for document/image conversion)
   - Ubuntu/Debian: `sudo apt-get install libreoffice`
   - macOS: `brew install libreoffice`
@@ -50,20 +52,51 @@ Before running this application, ensure you have the following installed:
    cd pdf_converter
    ```
 
-2. **Install dependencies**
+2. **Start PostgreSQL database with Docker**
    ```bash
-   mix setup
+   docker-compose up -d
    ```
-   This command will:
-   - Install Elixir dependencies
-   - Create and migrate the database
-   - Install and setup assets (TailwindCSS, esbuild)
-   - Build assets
+   
+   This will start a PostgreSQL 16 container with the following default credentials:
+   - Host: localhost
+   - Port: 5432
+   - Database: pdf_converter_dev
+   - Username: pdf_converter
+   - Password: pdf_converter_dev_password
 
-3. **Verify LibreOffice installation**
+   Verify the database is running:
+   ```bash
+   docker-compose ps
+   ```
+
+3. **Install dependencies and setup database**
+   ```bash
+   mix deps.get
+   mix ecto.create
+   mix ecto.migrate
+   ```
+
+4. **Setup and build assets**
+   ```bash
+   mix assets.setup
+   mix assets.build
+   ```
+
+5. **Verify LibreOffice installation**
    ```bash
    libreoffice --version
    ```
+
+### Environment Variables (Optional)
+
+You can customize database connection settings by creating a `.env` file (see `.env.example`):
+
+```bash
+cp .env.example .env
+# Edit .env with your preferred settings
+```
+
+The application will use default values if environment variables are not set.
 
 ## Usage
 
@@ -93,13 +126,36 @@ The application will be available at [`http://localhost:4000`](http://localhost:
 
 ## Development
 
+### Docker Commands
+
+```bash
+# Start PostgreSQL container
+docker-compose up -d
+
+# Stop PostgreSQL container
+docker-compose down
+
+# View PostgreSQL logs
+docker-compose logs -f postgres
+
+# Access PostgreSQL shell
+docker-compose exec postgres psql -U pdf_converter -d pdf_converter_dev
+
+# Remove container and volumes (⚠️ deletes all data)
+docker-compose down -v
+```
+
 ### Available Mix Commands
 
 ```bash
 # Setup project (install deps, create DB, setup assets)
-mix setup
+mix deps.get
+mix ecto.create
+mix ecto.migrate
+mix assets.setup
+mix assets.build
 
-# Run tests
+# Run tests (ensure PostgreSQL is running)
 mix test
 
 # Database commands
@@ -195,7 +251,8 @@ mix assets.deploy
 
 # Set production environment variables
 export SECRET_KEY_BASE=$(mix phx.gen.secret)
-export DATABASE_PATH=/path/to/production/database.db
+export DATABASE_URL="ecto://username:password@hostname:5432/pdf_converter_prod"
+export POOL_SIZE=10
 export PHX_HOST=yourdomain.com
 
 # Run database migrations
@@ -209,7 +266,9 @@ MIX_ENV=prod mix phx.server
 
 - [ ] Set `SECRET_KEY_BASE` environment variable
 - [ ] Configure `PHX_HOST` for your domain
-- [ ] Set `DATABASE_PATH` for SQLite database location
+- [ ] Configure `DATABASE_URL` with production PostgreSQL credentials
+- [ ] Set up PostgreSQL database (via Docker or managed service)
+- [ ] Set `POOL_SIZE` based on server capacity (default: 10)
 - [ ] Ensure LibreOffice is installed on production server
 - [ ] Set appropriate file permissions for upload/converted directories
 - [ ] Configure reverse proxy (nginx/Apache) if needed
@@ -226,7 +285,7 @@ Run the test suite:
 mix test
 ```
 
-The test environment uses an in-memory SQLite database that's created and migrated automatically.
+The test environment uses a PostgreSQL database (requires Docker container to be running).
 
 ## Troubleshooting
 
